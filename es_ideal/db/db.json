@@ -1,0 +1,414 @@
+{
+  "service-definitions": [
+    {
+      "id": "sp",
+      "descr": "Substituir pneus",
+      "duração": 40
+    },
+    {
+      "id": "cr",
+      "descr": "Calibrar rodas",
+      "duração": 20
+    },
+    {
+      "id": "ad",
+      "descr": "Alinhar direção",
+      "duração": 30
+    },
+    {
+      "id": "sct",
+      "descr": "Subsituir calços travões",
+      "duração": 60
+    },
+    {
+      "id": "mot",
+      "descr": "Mudar óleo travões",
+      "duração": 20
+    },
+    {
+      "id": "li",
+      "descr": "Limpeza interior",
+      "duração": 120
+    },
+    {
+      "id": "le",
+      "descr": "Limpeza exterior",
+      "duração": 30
+    },
+    {
+      "id": "sfah",
+      "descr": "Substituir filtro ar habitáculo",
+      "duração": 30
+    },
+    {
+      "id": "mom",
+      "descr": "Mudar óleo motor",
+      "duração": 10
+    },
+    {
+      "id": "sfo",
+      "descr": "Substituir filtro óleo",
+      "duração": 20
+    },
+    {
+      "id": "sfc",
+      "descr": "Substituir filtro combustível",
+      "duração": 30
+    },
+    {
+      "id": "sfam",
+      "descr": "Substituir filtro ar motor",
+      "duração": 30
+    },
+    {
+      "id": "scc",
+      "descr": "Substituir conversor catalítico",
+      "duração": 30
+    },
+    {
+      "id": "sba",
+      "descr": "Substituir bateria de arranque",
+      "duração": 30
+    },
+    {
+      "id": "svi",
+      "descr": "Substituir velas de incandescência",
+      "duração": 30
+    },
+    {
+      "id": "sfp",
+      "descr": "Substituir filtro de partículas",
+      "duração": 30
+    },
+    {
+      "id": "rfp",
+      "descr": "Regenerar filtro de partículas",
+      "duração": 30
+    },
+    {
+      "id": "sva",
+      "descr": "Substituir válvula do acelerador",
+      "duração": 30
+    },
+    {
+      "id": "svi",
+      "descr": "Substituir velas de ignição",
+      "duração": 30
+    },
+    {
+      "id": "adb",
+      "descr": "Avaliar desempenho da bateria",
+      "duração": 30
+    },
+    {
+      "id": "sb",
+      "descr": "Substituir bateria",
+      "duração": 20
+    }
+  ],
+  "vehicle-types": [
+    {
+      "id": "gasolina",
+      "serviços": [
+        "sp",
+        "cr",
+        "ad",
+        "sct",
+        "mot",
+        "li",
+        "le",
+        "sfah",
+        "mom",
+        "sfo",
+        "sfc",
+        "sfam",
+        "scc",
+        "sba",
+        "sva",
+        "svi"
+      ]
+    },
+    {
+      "id": "gasoleo",
+      "serviços": [
+        "sp",
+        "cr",
+        "ad",
+        "sct",
+        "mot",
+        "li",
+        "le",
+        "sfah",
+        "mom",
+        "sfo",
+        "sfc",
+        "sfam",
+        "scc",
+        "sba",
+        "svi",
+        "sfp",
+        "rfp"
+      ]
+    },
+    {
+      "id": "eletrico",
+      "serviços": [
+        "sp",
+        "cr",
+        "ad",
+        "sct",
+        "mot",
+        "li",
+        "le",
+        "sfah",
+        "adb",
+        "sb"
+      ]
+    },
+    {
+      "id": "hibrido",
+      "serviços": [
+        "sp",
+        "cr",
+        "ad",
+        "sct",
+        "mot",
+        "li",
+        "le",
+        "sfah",
+        "mom",
+        "sfo",
+        "sfc",
+        "sfam",
+        "scc",
+        "sba",
+        "sva",
+        "svi",
+        "adb",
+        "sb"
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "id": "123",
+      "nome": "João Silva",
+      "email": "js@imail.com",
+      "telefone": "912345678"
+    },
+    {
+      "id": "124",
+      "nome": "Maria Santos",
+      "email": "jms@imail.com",
+      "telefone": "912345679"
+    },
+    {
+      "id": "125",
+      "nome": "José Pereira",
+      "email": "jp@imail.com",
+      "telefone": "912345680"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "08-25-AA",
+      "clientId": "123",
+      "vehicle-typeId": "gasolina",
+      "cilindrada": 1000,
+      "kms": 200000
+    },
+    {
+      "id": "AH-31-BB",
+      "clientId": "124",
+      "vehicle-typeId": "gasoleo",
+      "cilindrada": 2000,
+      "kms": 120000
+    },
+    {
+      "id": "AH-32-44",
+      "clientId": "123",
+      "vehicle-typeId": "eletrico",
+      "potencia": 200,
+      "kms": 20000
+    },
+    {
+      "id": "AH-21-25",
+      "clientId": "125",
+      "vehicle-typeId": "hibrido",
+      "cilindrada": 1000,
+      "potencia": 200,
+      "kms": 80000
+    }
+  ],
+  "services": [
+    {
+      "id": "s31",
+      "vehicleId": "08-25-AA",
+      "service-definitionId": "sp",
+      "estado": "nafila",
+      "agendamento": "filaDeEspera",
+      "descrição": "Colocar XPTO 225R15",
+      "mechanic": "093b",
+      "servicos_adicionais": [
+
+      ]
+    },
+    {
+      "id": "s32",
+      "vehicleId": "AH-31-BB",
+      "service-definitionId": "li",
+      "estado": "programado",
+      "agendamento": "programado",
+      "data": {
+        "dia": 26,
+        "mes": 3,
+        "ano": 2024,
+        "hora": 14,
+        "minutos": 15
+      },
+      "descrição": "Atenção ao banco do condutor.",
+      "mechanic": "3c7e",
+      "servicos_adicionais": []
+    },
+    {
+      "id": "s33",
+      "vehicleId": "AH-32-44",
+      "service-definitionId": "le",
+      "estado": "nafila",
+      "agendamento": "filaDeEspera",
+      "descrição": "Ver jantes.",
+      "mechanic": "3c7e",
+      "servicos_adicionais": []
+    },
+    {
+      "id": "s34",
+      "vehicleId": "AH-21-25",
+      "service-definitionId": "sfc",
+      "estado": "parado",
+      "agendamento": "filaDeEspera",
+      "descrição": "Falta o filtro.",
+      "mechanic": "3c7e",
+      "servicos_adicionais": []
+    },
+    {
+      "id": "s12",
+      "vehicleId": "08-25-AA",
+      "service-definitionId": "sp",
+      "estado": "realizado",
+      "agendamento": "filaDeEspera",
+      "descrição": "Colocar XPTO 225R15",
+      "mechanic": "093b",
+      "servicos_adicionais": [
+        "li"
+      ]
+    },
+    {
+      "id": "s24",
+      "vehicleId": "08-25-AA",
+      "service-definitionId": "li",
+      "estado": "realizado",
+      "agendamento": "programado",
+      "data": {
+        "dia": 2,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 14,
+        "minutos": 15
+      },
+      "descrição": "shampoo XPTO",
+      "mechanic": "3c7e",
+      "servicos_adicionais": [
+        "le"
+      ]
+    },
+    {
+      "id": "205f",
+      "mechanic": "093b",
+      "servicos_adicionais": []
+    },
+    {
+      "id": "eb59",
+      "mechanic": "093b",
+      "servicos_adicionais": []
+    },
+    {
+      "id": "397e",
+      "mechanic": "093b",
+      "servicos_adicionais": []
+    },
+    {
+      "id": "2023",
+      "mechanic": "093b",
+      "servicos_adicionais": []
+    }
+  ],
+  "mechanics": [
+    {
+      "username": "123456",
+      "password": "123",
+      "perfil": {
+        "nome": "Diogo",
+        "idade": 55,
+        "profissao": "Mecânico",
+        "localizacao": "Braga",
+        "educacao": "Curso básico de mecânica automóvel",
+        "especializacao": "Motores a combustão",
+        "interesses": [
+          "Automóveis",
+          "futebol",
+          "séries"
+        ],
+        "objetivos": [
+          "Manter o seu emprego",
+          "aprender mais sobre carros elétricos"
+        ],
+        "desafios": [
+          "Adaptar-se às novas tecnologias",
+          "evitar erros e reclamações"
+        ],
+        "solucoes": [
+          "Pesquisar na internet",
+          "assistir a vídeos e tutoriais",
+          "pedir ajuda aos colegas mais novos"
+        ],
+        "citacao": "Eu gosto de trabalhar com carros, mas às vezes sinto que não estou preparado para lidar com os novos modelos. Eu quero mostrar o meu valor na empresa, mas quando me atribuem trabalho fora da minha especialização sou obrigado a ir à secretaria dizer que não o posso realizar e temo ficar mal visto. O novo sistema devia ajudar a resolver isso. Espero que seja de utilização fácil."
+      },
+      "id": "093b"
+    },
+    {
+      "username": "0987",
+      "password": "12345",
+      "perfil": {
+        "nome": "Diana",
+        "idade": 24,
+        "profissao": "Mecânica",
+        "localizacao": "Braga",
+        "educacao": "Curso técnico de mecânica automóvel",
+        "especializacao": "Geral",
+        "interesses": [
+          "Tecnologia",
+          "automobilismo",
+          "ciência",
+          "livros"
+        ],
+        "objetivos": [
+          "Destacar-se na sua área",
+          "progredir na carreira"
+        ],
+        "desafios": [
+          "Lidar com a desconfiança dos clientes",
+          "adaptar-se às novas tecnologias",
+          "dominar o novo sistema informático"
+        ],
+        "solucoes": [
+          "Pesquisar na internet",
+          "fazer cursos e certificações",
+          "consultar manuais e revistas técnicas",
+          "usar o sistema informático para otimizar o seu trabalho"
+        ],
+        "citacao": "Eu amo o que faço, mas sei que preciso me atualizar constantemente. Os carros estão cada vez mais sofisticados e eu quero estar preparada para qualquer desafio. O novo sistema informático é uma oportunidade para eu melhorar a minha produtividade e a qualidade do meu serviço."
+      },
+      "id": "3c7e"
+    }
+  ]
+}
